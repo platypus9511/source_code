@@ -121,20 +121,10 @@ public class control : MonoBehaviour
             _anim.speed = 1.0f;
         }
 
-        if (v > 0.2f)
+        if (v > 0.5f)
         {
             _Char2D.Jump();
         }
-
-        Vector2 vel = _rigid.velocity;
-
-        //x축으로의 속도가 3(_moveMAx)를 넘지 않게 한다.
-        float newVelX = Mathf.Min(_moveMax, vel.x);
-
-        //x축으로의 속도가 -1* _moveMAx보다 작아지지 않게 한다.
-        newVelX = Mathf.Max(-1 * _moveMax, newVelX);
-
-        _rigid.velocity = new Vector2(newVelX, vel.y);
     }
 
     public void Grab(GameObject grabObj)

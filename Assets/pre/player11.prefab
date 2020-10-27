@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigid: {fileID: 6549180992647829765}
-  _moveForce: 2000
+  _moveForce: 2500
   _moveMax: 5
   _Char2D: {fileID: 6549180992647829766}
   _testR: {fileID: 0}
