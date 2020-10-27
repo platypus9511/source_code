@@ -20,7 +20,7 @@ public class clearzone : MonoBehaviour
     {
         if(collision.gameObject.name == "player")
         {
-            if( collision is BoxCollider2D )
+            if( collision is BoxCollider2D)
             {
                 Debug.Log("stage clear");
                 uiManager uiMgr = FindObjectOfType<uiManager>();

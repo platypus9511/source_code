@@ -11,6 +11,8 @@ public class Ui_Game : MonoBehaviour
     public void Init(Canvas canvas)
     {
         _canvas = canvas;
+
+        gameObject.transform.SetParent(_canvas.transform, false);
     }
     
 
@@ -36,9 +38,12 @@ public class Ui_Game : MonoBehaviour
             GameObject stagepopup = Instantiate(stagePrefab);
 
             // 캔버스의 자식 객체로 만들기
-            stagepopup.transform.parent = _canvas.transform;
+            //stagepopup.transform.parent = _canvas.transform;
+            stagepopup.transform.SetParent(_canvas.transform, false);
             RectTransform rect = stagepopup.GetComponent<RectTransform>();
             rect.anchoredPosition = Vector3.zero;
+
+            
         }
         if(buttonObj.name == "back")
         {

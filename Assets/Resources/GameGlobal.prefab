@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bgmList: []
   _selectedStage: 1
-  _stageNum: 2
+  _stageNum: 1

@@ -113,7 +113,7 @@ public class Char2D : Character
         _uiMgr.OnDamage(_data._hp);
 
 
-        _anim.SetBool("hit", true);
+        _anim.SetTrigger("hit 0");
         _anim.SetInteger("HP", _data._hp);
 
 
@@ -129,7 +129,6 @@ public class Char2D : Character
     {
         //게임오버 처리
         _uiMgr.Show("Ui_gameOver", true); // 게임오버 On
-
         // if (_snd_Death) _snd_Death.Play();
     }
 

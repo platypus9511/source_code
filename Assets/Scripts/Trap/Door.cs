@@ -11,6 +11,7 @@ public class Door : MonoBehaviour
     public int _switchCount = 0;
     public int _switchCountMax = 1;
     public AudioSource _dooropen;
+    public AudioSource _doorclosed;
    
 
     
@@ -73,6 +74,6 @@ public class Door : MonoBehaviour
 
     public void OnDoorClosed()
     {
-
+        _doorclosed.Play();
     }
 }

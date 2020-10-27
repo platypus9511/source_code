@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Ui_Quit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Canvas _canvas;
+
+    public void Init(Canvas canvas)
     {
-        
+        _canvas = canvas;
+
+        gameObject.transform.SetParent(_canvas.transform, false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void OnButtonQuit()
     {

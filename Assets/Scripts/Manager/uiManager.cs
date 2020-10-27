@@ -175,7 +175,7 @@ public class uiManager : MonoBehaviour
         _raycaster.Raycast(data, results);
         foreach (RaycastResult r in results)
         {
-            if (r.gameObject.name == "LeftTouchArea" ||
+            if (r.gameObject.name == "Lefttoucharea" ||
                 r.gameObject.name == "Handle" ||
                 r.gameObject.name == "Fixed Joystick")
             {
@@ -198,14 +198,5 @@ public class uiManager : MonoBehaviour
         _joystick.gameObject.SetActive(false);
         _joystick.OnPointerUp(null);
     }
-
-    /*
-    public void OnDragDirection()
-    {
-        _mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        _angel = Mathf.Atan2(_mouse.y - _targer.y, _mouse.x - _targer.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(_angel + 90, Vector3.forward);
-    }
-    */
 }
 

@@ -38,6 +38,7 @@ public class TittleScene : BaseScene
 
             Ui_Game uiGame = gamepopup.GetComponent<Ui_Game>();
             uiGame.Init(_canvas);
+            
             // 캔버스의 자식 객체로 만들기
             gamepopup.transform.parent = _canvas.transform;
 
@@ -56,8 +57,12 @@ public class TittleScene : BaseScene
             // 프리팹으로 부터 복사된 인스턴스 씬에 배치
             GameObject optionpopup = Instantiate(optionPrefab);
 
+            Ui_OptionPopUp uiquit = optionpopup.GetComponent<Ui_OptionPopUp>();
+            uiquit.Init(_canvas);
+
             // 캔버스의 자식 객체로 만들기
             optionpopup.transform.parent = _canvas.transform;
+         
             RectTransform rect = optionpopup.GetComponent<RectTransform>();
             rect.anchoredPosition = Vector3.zero;
         }
@@ -73,11 +78,15 @@ public class TittleScene : BaseScene
             GameObject stagePrefab = Resources.Load("UI/QuitPopup") as GameObject;
 
             // 프리팹으로 부터 복사된 인스턴스 씬에 배치
-            GameObject stagepopup = Instantiate(stagePrefab);
+            GameObject quitpopup = Instantiate(stagePrefab);
+
+            Ui_Quit uiquit = quitpopup.GetComponent<Ui_Quit>();
+            uiquit.Init(_canvas);
 
             // 캔버스의 자식 객체로 만들기
-            stagepopup.transform.parent = _canvas.transform;
-            RectTransform rect = stagepopup.GetComponent<RectTransform>();
+            quitpopup.transform.parent = _canvas.transform;
+       
+            RectTransform rect = quitpopup.GetComponent<RectTransform>();
             rect.anchoredPosition = Vector3.zero;
         }
 
